@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <boost/assign/list_of.hpp>
-#include <QDebug>
+//#include <QDebug>
 #include "kernel.h"
 #include "db.h"
 #include "txdb.h"
@@ -355,9 +355,9 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
     // Now check if proof-of-stake hash meets target protocol
     if (CBigNum(hashProofOfStake) > bnCoinDayWeight * bnTargetPerCoinDay)
 	{
-        qDebug() << "hashProofOfStake = " << CBigNum(hashProofOfStake).ToString().c_str();
-        qDebug() << "bnCoinDayWeight = " << bnCoinDayWeight.ToString().c_str();
-        qDebug() << "bnTargetPerCoinDay = " << bnTargetPerCoinDay.ToString().c_str();
+        //qDebug() << "hashProofOfStake = " << CBigNum(hashProofOfStake).ToString().c_str();
+        //qDebug() << "bnCoinDayWeight = " << bnCoinDayWeight.ToString().c_str();
+        //qDebug() << "bnTargetPerCoinDay = " << bnTargetPerCoinDay.ToString().c_str();
         //printf(">>> CheckStakeKernelHash - hashProofOfStake too much\n");
         return false;
 	}
