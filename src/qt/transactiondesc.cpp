@@ -3,7 +3,6 @@
 #include "guiutil.h"
 #include "bitcoinunits.h"
 
-#include "txdb.h"
 #include "main.h"
 #include "wallet.h"
 #include "db.h"

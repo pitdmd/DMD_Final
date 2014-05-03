@@ -12,7 +12,7 @@
 #include "main.h"
 #include "net.h"
 #include "wallet.h"
-#include "txdb.h"
+
 using namespace std;
 using namespace boost;
 using namespace boost::assign;

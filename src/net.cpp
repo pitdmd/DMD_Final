@@ -1846,11 +1846,11 @@ void StartNode(void* parg)
     //
 
 
-//    if (!GetBoolArg("-dnsseed", true))
-//        printf("DNS seeding disabled\n");
-//    else
-//        if (!NewThread(ThreadDNSAddressSeed, NULL))
-//            printf("Error: NewThread(ThreadDNSAddressSeed) failed\n");
+    if (!GetBoolArg("-dnsseed", true))
+        printf("DNS seeding disabled\n");
+    else
+        if (!NewThread(ThreadDNSAddressSeed, NULL))
+            printf("Error: NewThread(ThreadDNSAddressSeed) failed\n");
 
     if (!GetBoolArg("-dnsseed", false))
         printf("DNS seeding disabled\n");
@@ -1861,9 +1861,9 @@ void StartNode(void* parg)
     if (fUseUPnP)
         MapPort();
 
-//    // Get addresses from IRC and advertise ours
-//    if (!NewThread(ThreadIRCSeed, NULL))
-//        printf("Error: NewThread(ThreadIRCSeed) failed\n");
+    // Get addresses from IRC and advertise ours
+    if (!NewThread(ThreadIRCSeed, NULL))
+        printf("Error: NewThread(ThreadIRCSeed) failed\n");
 
     // Send and receive from sockets, accept connections
     if (!NewThread(ThreadSocketHandler, NULL))

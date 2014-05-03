@@ -6,7 +6,6 @@
 //#include <QDebug>
 #include "kernel.h"
 #include "db.h"
-#include "txdb.h"
 
 using namespace std;
 

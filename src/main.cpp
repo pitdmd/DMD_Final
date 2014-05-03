@@ -5,7 +5,6 @@
 
 #include "alert.h"
 #include "checkpoints.h"
-#include "txdb.h"
 #include "db.h"
 #include "net.h"
 #include "init.h" 
