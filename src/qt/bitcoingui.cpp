@@ -76,7 +76,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
     resize(850, 550);
     setWindowTitle(tr("Diamond") + " - " + tr("Wallet"));
-    setStyleSheet("QMainWindow{border-image: url(:/images/main_backg)} QToolButton:!hover {color:white;} QToolButton:hover {background-color:rgba(59, 88, 104, 250);color:white;} ");
+    setStyleSheet("QMainWindow{border-image: url(:/images/main_backg)} QToolButton:!hover {color:white;} QToolButton:hover {background-color:rgb(59, 88, 104);color:white;} QToolTip {background-color:#1f333e; color:white;}");
 
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));

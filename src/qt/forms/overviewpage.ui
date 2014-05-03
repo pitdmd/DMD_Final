@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>655</width>
-    <height>447</height>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
    <item>
@@ -53,7 +56,8 @@
              <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Diamond network after a connection is established, but this process has not completed yet.</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: red; background:transparent;}</string>
+             <string notr="true">QToolTip {background-color:#1f333e; color:white;}
+QLabel { color: red; background:transparent;}</string>
             </property>
             <property name="text">
              <string notr="true">(out of sync)</string>
@@ -114,7 +118,8 @@
              <string>Your current balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel {background:transparent;}
+QToolTip {background-color:#1f333e; color:white;}</string>
             </property>
             <property name="text">
              <string notr="true">0 DMD</string>
@@ -149,7 +154,8 @@
              <string>Total of coins that was staked, and do not yet count toward the current balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel {background:transparent;}
+QToolTip {background-color:#1f333e; color:white;}</string>
             </property>
             <property name="text">
              <string notr="true">0 DMD</string>
@@ -184,7 +190,8 @@
              <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel {background:transparent;}
+QToolTip {background-color:#1f333e; color:white;}</string>
             </property>
             <property name="text">
              <string notr="true">0 DMD</string>
@@ -216,7 +223,8 @@
              <string>Mined balance that has not yet matured</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel {background:transparent;}
+QToolTip {background-color:#1f333e; color:white;}</string>
             </property>
             <property name="text">
              <string notr="true">0 DMD</string>
@@ -242,7 +250,8 @@
              <string>Total number of transactions in wallet</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel {background:transparent;}
+QToolTip {background-color:#1f333e; color:white;}</string>
             </property>
             <property name="text">
              <string notr="true">0</string>
@@ -326,7 +335,8 @@
              <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Diamond network after a connection is established, but this process has not completed yet.</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: red; background:transparent; }</string>
+             <string notr="true">QToolTip {background-color:#1f333e; color:white;}
+QLabel { color: red; background:transparent; }</string>
             </property>
             <property name="text">
              <string notr="true">(out of sync)</string>
@@ -354,7 +364,8 @@
         <item>
          <widget class="QListView" name="listTransactions">
           <property name="styleSheet">
-           <string notr="true">QListView { background: transparent; }</string>
+           <string notr="true">QListView { background: transparent; }
+QToolTip {background-color:#1f333e; color:white;}</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
@@ -370,24 +381,27 @@
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
       <widget class="QPushButton" name="unlockWalletButton">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Unlock wallet</string>
        </property>

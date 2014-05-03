@@ -170,7 +170,8 @@ void TransactionView::setModel(WalletModel *model)
 
         transactionView->setModel(transactionProxyModel);
         transactionView->setAlternatingRowColors(true);
-        transactionView->setStyleSheet("alternate-background-color: rgb(37,59,72); background-color: rgb(60,93,112); selection-background-color: rgb(97,147,174);");
+        transactionView->setStyleSheet("QTableView{alternate-background-color: rgb(37,59,72); background-color: rgb(60,93,112); selection-background-color: rgb(97,147,174);} QToolTip{background-color:#1f333e; color:white}");
+
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
         transactionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
         transactionView->setSortingEnabled(true);

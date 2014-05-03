@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">SendCoinsDialog {background:transparent; color:white;}
+QToolTip {background-color:#1f333e; color:white;}
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -113,7 +114,8 @@ background-color:rgba(255, 255, 255, 40); color: white;</string>
         <string>Send to multiple recipients at once</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(69, 87, 96); color: white;</string>
+        <string notr="true">QPushButton {background-color:rgb(69, 87, 96); color: white;}
+QToolTip {background-color:#1f333e; color:white;}</string>
        </property>
        <property name="text">
         <string>Add &amp;Recipient</string>
@@ -142,7 +144,8 @@ background-color:rgba(255, 255, 255, 40); color: white;</string>
         <string>Remove all transaction fields</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(69, 87, 96); color: white;</string>
+        <string notr="true">QPushButton {background-color:rgb(69, 87, 96); color: white;}
+QToolTip {background-color:#1f333e; color:white;}</string>
        </property>
        <property name="text">
         <string>Clear &amp;All</string>
@@ -211,7 +214,8 @@ background-color:rgba(255, 255, 255, 40); color: white;</string>
         <string>Confirm the send action</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(69, 87, 96); color: white;</string>
+        <string notr="true">QPushButton {background-color:rgb(69, 87, 96); color: white;}
+QToolTip {background-color:#1f333e; color:white;}</string>
        </property>
        <property name="text">
         <string>S&amp;end</string>

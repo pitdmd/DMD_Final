@@ -1007,17 +1007,21 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
         {
             nSubsidy = nCoinAge * 50 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8) / COIN;
         }
+        else if(totalCoin > VALUE_CHANGE + 4000)
+        {
+            nSubsidy = nCoinAge / COIN * 50 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8);
+        }
         else if(totalCoin > 1500000)
         {
-            nSubsidy = nCoinAge * 25 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8) / COIN;
+            nSubsidy = nCoinAge / COIN * 25 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8);
         }
         else if(totalCoin > 2500000)
         {
-            nSubsidy = nCoinAge * 5 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8) / COIN;
+            nSubsidy = nCoinAge / COIN * 5 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8);
         }
         else if(totalCoin > 3500000)
         {
-            nSubsidy = nCoinAge * 1 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8) / COIN;
+            nSubsidy = nCoinAge / COIN * 1 * MAX_MINT_PROOF_OF_STAKE * 33 / (365 * 33 + 8);
         }
 
         if (fDebug && GetBoolArg("-printcreation"))
